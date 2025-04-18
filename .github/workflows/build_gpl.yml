@@ -226,7 +226,7 @@ jobs:
           EXTERNAL_DEP_CACHE_HIT: ${{ steps.external-dep-cache.outputs.cache-hit }}
         run: |
           sudo apt remove -y libc++1-14 libc++abi1-14 libunwind-14 python3-lldb-14 # conflict with latest llvm
-          sudo apt install libdvdnav-dev libdvdread-dev libbluray-dev  libbdplus-dev libsmbclient-dev
+          sudo apt install libdvdnav-dev libdvdread-dev libbluray-dev  libbdplus-dev libsmbclient-dev libfribidi-dev
           ./tools/ci-before-build.sh
           wget https://sourceforge.net/projects/avbuild/files/dep/dep_gpl.7z/download -O dep_gpl.7z
           7z x -y dep_gpl.7z -otools
