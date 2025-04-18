@@ -236,6 +236,8 @@ jobs:
           export FFSRC=$PWD/ffmpeg-${FF_VERSION}
           export SYSROOT=/tmp/sysroot
           export USER_OPT="--enable-libshaderc --enable-libdvdnav --enable-libdvdread --enable-libsmbclient --enable-version3"
+          ls /usr/include
+          ls /tmp/sysroot/usr/include
           USE_TOOLCHAIN=clang-${LLVM_VER:-$LLVM_VER_DEFAULT} ./avbuild.sh linux "amd64"
       - name: Make SDK
         shell: bash
