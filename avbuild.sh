@@ -1450,7 +1450,7 @@ setup_linux_env() {
 # pkg-config use aboslute paths, can not set PKG_CONFIG_SYSROOT_DIR because we have .pc outside sysroot, so manually add include dirs
     include_with_sysroot_compat /usr/include/freetype2 /usr/include/fribidi /usr/include/harfbuzz
   }
-  include_with_sysroot_compat /usr/include/dvdnav /usr/include/dvdread /usr/include/libbluray /usr/include/libaacs /usr/include/libbdplus
+  include_with_sysroot_compat /usr/include/dvdnav /usr/include/dvdread /usr/include/libbluray /usr/include/libbdplus
   $USE_VK && EXTRA_CFLAGS+=" -I\$THIS_DIR/tools/Vulkan-Headers/include"
   $IS_CLANG && enable_cuda_llvm
 
